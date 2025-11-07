@@ -16,9 +16,21 @@ export class OrdersController {
     return this.ordersService.sendMessagesForAllSellers();
   }
 
-  // ✅ Send WhatsApp messages to customers
+  // Send WhatsApp messages to customers
   @Post('send-messages')
   async sendOrderMessages(@Body() body: { whatsappNumber: string }) {
     return this.ordersService.sendOrderMessages(body.whatsappNumber);
   }
+
+  @Post('send-messages-all-hours')
+  async sendMessagesForCurrentHour() {
+    return this.ordersService.sendMessagesForAllSellersForCurrentHour();
+  }
+
+  @Post('test-hourly-task')
+async testHourlyTask() {
+  await this.ordersService.handleHourlyTask();
+  return { message: 'Hourly task triggered manually.' };
+}
+
 }
