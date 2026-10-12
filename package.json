@@ -1,8 +1,8 @@
 {
-  "name": "w-app-ras",
+  "name": "whatsapp-mailing",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "Automatic WhatsApp messages to Kaspi.kz customers after an order",
+  "author": "Ratmir Akimov",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {

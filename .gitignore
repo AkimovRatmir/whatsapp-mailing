@@ -54,3 +54,7 @@ pids
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# WhatsApp Web login sessions — never commit, they grant access to the accounts
+.wwebjs_auth/
+.wwebjs_cache/
